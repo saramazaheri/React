@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
-import UserC from "./assets/User";
+import UserC from "./assets/UserC";
+
+import UserF from "./assets/UserF";
 
 class App extends Component {
   constructor() {
@@ -38,7 +40,8 @@ class App extends Component {
         {/* <button onClick={this.ChangeHandler}>Change</button> */}
         <h1>{this.state.number}</h1>
         <button onClick={this.upThree}>Count</button>
-        <UserC />
+        <UserC lastname="Mazaheri" career="Programmer" />
+        <UserF Country="Iran" City="Tehran" />
       </div>
     );
   }
