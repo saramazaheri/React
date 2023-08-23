@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import UserC from "./assets/User";
+
 class App extends Component {
   constructor() {
     super();
@@ -36,6 +38,7 @@ class App extends Component {
         {/* <button onClick={this.ChangeHandler}>Change</button> */}
         <h1>{this.state.number}</h1>
         <button onClick={this.upThree}>Count</button>
+        <UserC />
       </div>
     );
   }
