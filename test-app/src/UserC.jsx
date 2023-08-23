@@ -11,12 +11,13 @@ class UserC extends Component {
   render() {
     const { name, age } = this.state;
     const { lastname, career } = this.props;
+    const header = { color: "blue", fontSize: 20 };
     return (
       <div>
         <p>
           Hi, my name is {name} {lastname} and I am {age} years old.
         </p>
-        <p>I am a {career}</p>
+        <p style={header}>I am a {career}</p>
       </div>
     );
   }

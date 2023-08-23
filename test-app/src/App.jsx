@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 
-import UserC from "./assets/UserC";
+import UserC from "./UserC";
 
-import UserF from "./assets/UserF";
+import UserF from "./UserF";
+
+import "./App.css";
 
 class App extends Component {
+  header = { color: "red", fontSize: 20 };
   constructor() {
     super();
     this.state = {
@@ -38,7 +41,9 @@ class App extends Component {
           My first car is {this.state.name} and it has {this.state.speed} speed.
         </p> */}
         {/* <button onClick={this.ChangeHandler}>Change</button> */}
+        <h1 className="header">Hello world</h1>
         <h1>{this.state.number}</h1>
+        <h2 style={this.header}>This color is red</h2>
         <button onClick={this.upThree}>Count</button>
         <UserC lastname="Mazaheri" career="Programmer" />
         <UserF Country="Iran" City="Tehran" />
