@@ -1,0 +1,23 @@
+.container img {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+}
+
+.textcontainer {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.textcontainer h1 {
+  color: #696969;
+  font-weight: bold;
+}
+
+.textcontainer p {
+  margin-top: 20px;
+  color: #696969;
+}
