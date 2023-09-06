@@ -6,6 +6,12 @@ import Baner from "./Components/Baner";
 
 import Cards from "./Components/Cards";
 
+import Search from "./Components/Search";
+
+import Logos from "./Components/Logos";
+
+import Footer from "./Components/Footer";
+
 class App extends Component {
   render() {
     return (
@@ -13,6 +19,9 @@ class App extends Component {
         <Navbar />
         <Baner />
         <Cards />
+        <Search />
+        <Logos />
+        <Footer />
       </div>
     );
   }
