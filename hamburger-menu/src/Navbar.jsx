@@ -18,7 +18,7 @@ const Ul = styled.ul`
     position: fixed;
     transition: all 0.3s linear;
     transform: ${(props) =>
-      props.open ? "translateX(0)" : "translateX(100%) "};
+      props.open ? "translateX(100%)" : "translateX(0) "};
     top: 0;
     right: 0;
     height: 100vh;
