@@ -13,10 +13,10 @@ class Cards extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <Card image={pic1} name="Refah Bank" click="Click here" />
-        <Card image={pic2} name="Refah Bank" click="Click here" />
-        <Card image={pic3} name="Refah Bank" click="Click here" />
-        <Card image={pic4} name="Refah Bank" click="Click here" />
+        <Card image={pic1} name="Refah Bank" click="cost" />
+        <Card image={pic2} name="Refah Bank" click="cost" />
+        <Card image={pic3} name="Refah Bank" click="cost" />
+        <Card image={pic4} name="Refah Bank" click="cost" />
       </div>
     );
   }
