@@ -31,10 +31,13 @@ class Card extends Component {
       <div className={styles.container}>
         <img src={image} alt="4cards" />
         <h3>{name}</h3>
-        <p>{click}</p>
+
+        <p>
+          {click} {counter ? `* ${counter} = ${counter * click} $` : ""}
+        </p>
         <div className={styles.counter}>
           <img
-            className={this.state.counter ? "" : styles.deactive}
+            className={!this.state.counter && styles.deactive}
             src={down}
             alt="arrow"
             onClick={this.downHandler}
