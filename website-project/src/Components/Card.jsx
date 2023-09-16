@@ -27,14 +27,17 @@ class Card extends Component {
   render() {
     const { image, name, click } = this.props;
     const { counter } = this.state;
+    let text;
+    if (counter == 0) {
+      text = <p>{click}</p>;
+    } else {
+      text = <p>{counter * click}</p>;
+    }
     return (
       <div className={styles.container}>
         <img src={image} alt="4cards" />
         <h3>{name}</h3>
-
-        <p>
-          {click} {counter ? `* ${counter} = ${counter * click} $` : ""}
-        </p>
+        <p>{text}</p>
         <div className={styles.counter}>
           <img
             className={!this.state.counter && styles.deactive}
