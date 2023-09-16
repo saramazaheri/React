@@ -11,7 +11,7 @@ class Cars extends Component {
     return (
       <div>
         <h1>My Cars:</h1>
-        {this.state.cars.map}
+        {this.state.cars.map(car => <p>{}</p>)}
       </div>
     );
   }
