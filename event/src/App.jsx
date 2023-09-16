@@ -6,6 +6,8 @@ import ClassEvent from "./ClassEvent";
 
 import Login from "./Login";
 
+import Cars from "./Cars";
+
 class App extends Component {
   render() {
     return (
@@ -13,6 +15,7 @@ class App extends Component {
         <Login />
         <ClassEvent />
         {/*<FunctionEvent />*/}
+        <Cars />
       </div>
     );
   }
