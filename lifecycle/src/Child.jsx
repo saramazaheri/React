@@ -1,24 +1,9 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 
-class Child extends Component {
-  constructor() {
-    super();
-    this.state = {};
-    console.log("Child constructor");
-  }
-
-  componentDidMount() {
-    console.log("Child componentDidMount");
-  }
-  componentDidUpdate() {
-    console.log("Child componentDidUpdate");
-  }
-  componentWillUnmount() {
-    console.log("Child componentWillUnmount");
-  }
+class Child extends PureComponent {
   render() {
-    console.log(" Child render");
-    return <div>Child</div>;
+    console.log("Child is rendered");
+    return <div>{this.props.text} Child</div>;
   }
 }
 

@@ -1,35 +1,26 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
+
 import Child from "./Child";
-class App extends Component {
+
+class App extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      // text: "Hi",
-      isShown: true,
+      text: "HI",
     };
-    console.log("constructor");
   }
-
-  componentDidMount() {
-    console.log("componentDidMount");
-  }
-  componentDidUpdate() {
-    console.log("componentDidUpdate");
-  }
-  removeHandler = () => {
-    this.setState(
-      (isShown = false)
-      // text: "Bye",
-    );
+  reSet = () => {
+    this.setState({
+      text: "HI",
+    });
   };
   render() {
-    console.log("render");
+    console.log("App is rendered");
     return (
       <div>
-        {this.state.isShown && <Child />}
-        {/* <Child /> */}
-        {/* <h1>{this.state.text}</h1> */}
-        <button onClick={this.removeHandler}>remove</button>
+        <button onClick={this.reSet}>reSet</button>
+        <h1>{this.state.text}</h1>
+        <Child text={this.state.text} />
       </div>
     );
   }
