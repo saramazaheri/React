@@ -14,7 +14,7 @@ class App extends PureComponent {
     this.state = {
       text: "HI",
     };
-    this.state = { postData: [] };
+    this.state = { postData: [], isError: false };
   }
   //JsonPlaceHolder
   // getPost = () => {
@@ -31,7 +31,9 @@ class App extends PureComponent {
     axios
       .get("https://jsonplaceholder.typicode.com/posts")
       // .then((response) => console.log(response));
-      .then((response) => this.setState({ postData: response.data }));
+      .then((response) => this.setState({ postData: response.data }))
+      // .catch((error) => console.log(error));
+      .catch(() => this.setState({ isError: true }));
   }
 
   reSet = () => {
@@ -39,9 +41,16 @@ class App extends PureComponent {
       text: "HI",
     });
   };
+
+  deletePost = (id) => {
+    axios
+      .delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
+      .then((response) => console.log(response));
+  };
+
   render() {
     console.log("App is rendered");
-    const { postData } = this.state;
+    const { postData, isError } = this.state;
     return (
       <div>
         <SendPost />
@@ -55,9 +64,18 @@ class App extends PureComponent {
           <p key={post.id}>{post.title}</p>
         ))} */}
         <h1>Posts:</h1>
-        {postData.map((post) => (
-          <Post key={post.id} title={post.title} body={post.body} />
-        ))}
+        {isError ? (
+          <h1>A error occured. Badan bia neshoonet midam</h1>
+        ) : (
+          postData.map((post) => (
+            <Post
+              key={post.id}
+              deletePost={() => this.deletePost(post.id)}
+              title={post.title}
+              body={post.body}
+            />
+          ))
+        )}
       </div>
     );
   }
