@@ -29,7 +29,7 @@ class App extends PureComponent {
     //   .then((json) => this.setState({ postData: json }));
     //axios
     axios
-      .get("https://jsonplaceholder.typicode.com/posts")
+      .get("/posts")
       // .then((response) => console.log(response));
       .then((response) => this.setState({ postData: response.data }))
       // .catch((error) => console.log(error));
@@ -43,9 +43,7 @@ class App extends PureComponent {
   };
 
   deletePost = (id) => {
-    axios
-      .delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
-      .then((response) => console.log(response));
+    axios.delete(`/posts/${id}`).then((response) => console.log(response));
   };
 
   render() {

@@ -17,7 +17,7 @@ class SendPost extends Component {
   postHandler = () => {
     const text = this.state.title;
     axios
-      .post("https://jsonplaceholder.typicode.com/posts/", { title: text })
+      .post("/posts/", { title: text })
       .then((response) => console.log(response.status));
   };
   render() {
