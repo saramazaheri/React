@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-class Blogs extends Component {
+class Product extends Component {
   constructor(props) {
     super(props);
   }
@@ -7,11 +7,10 @@ class Blogs extends Component {
   render() {
     return (
       <div>
-        <h1>Blogs:</h1>
-        <p>This author is {this.props.match.params.author}</p>
+        <h1>This is product #{this.props.match.params.id}</h1>
       </div>
     );
   }
 }
 
-export default Blogs;
+export default Product;

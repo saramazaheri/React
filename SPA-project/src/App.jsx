@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import HomePage from "./Components/HomePage";
 import Blogs from "./Components/Blogs";
 import AboutUs from "./Components/AboutUs";
 import Products from "./Components/Products";
+import NavBar from "./Components/NavBar";
+import Product from "./Components/Product";
 
 class App extends Component {
   constructor(props) {
@@ -13,25 +15,19 @@ class App extends Component {
   render() {
     return (
       <div>
-        <ul>
-          <li>
-            <a href="/">HomePage</a>
-          </li>
-          <li>
-            <a href="/blogs">Blogs</a>
-          </li>
-          <li>
-            <a href="aboutus">AboutUs</a>
-          </li>
-          <li>
-            <a href="products">Products</a>
-          </li>
-        </ul>
         <div>
-          <Route path="/" component={HomePage} />
-          <Route path="/blogs" component={Blogs} />
-          <Route path="/aboutus" component={AboutUs} />
-          <Route path="/products" component={Products} />
+          <NavBar />
+          <Switch>
+            <Route path="/products/:id" component={Product} />
+            <Route
+              path="/blogs/:author?"
+              component={Blogs}
+              // render={(props) => <Blogs name="Sara" {...props} />}
+            />
+            <Route path="/aboutus" component={AboutUs} />
+            <Route path="/products" component={Products} />
+            <Route path="/" component={HomePage} />
+          </Switch>
         </div>
       </div>
     );
