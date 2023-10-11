@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import HomePage from "./Components/HomePage";
 import Blogs from "./Components/Blogs";
 import AboutUs from "./Components/AboutUs";
 import Products from "./Components/Products";
 import NavBar from "./Components/NavBar";
 import Product from "./Components/Product";
+import Notfound from "./Components/Notfound";
 
 class App extends Component {
   constructor(props) {
@@ -26,7 +27,10 @@ class App extends Component {
             />
             <Route path="/aboutus" component={AboutUs} />
             <Route path="/products" component={Products} />
-            <Route path="/" component={HomePage} />
+            <Redirect from="/articles" to="/blogs" />
+            <Route exact path="/" component={HomePage} />
+            <Route path="/notfound" component={Notfound} />
+            <Redirect to="/notfound" />
           </Switch>
         </div>
       </div>
