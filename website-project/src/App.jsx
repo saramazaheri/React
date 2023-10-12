@@ -1,15 +1,8 @@
 import React, { Component } from "react";
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar";
-
-import Baner from "./Components/Baner";
-
-import Cards from "./Components/Cards";
-
-import Search from "./Components/Search";
-
-import Logos from "./Components/Logos";
-
+import Landing from "./Components/Landing";
+import Products from "./Components/Products";
 import Footer from "./Components/Footer";
 
 class App extends Component {
@@ -17,10 +10,12 @@ class App extends Component {
     return (
       <div>
         <Navbar />
-        <Baner />
-        <Cards />
-        <Search />
-        <Logos />
+        <Router>
+          <Routes>
+            <Route path="/products" element={<Products />} />
+            <Route path="/" element={<Landing />} />
+          </Routes>
+        </Router>
         <Footer />
       </div>
     );

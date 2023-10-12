@@ -17,6 +17,11 @@
   list-style: none;
 }
 
+.list li a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .list li {
   padding: 15px;
   cursor: pointer;
@@ -24,6 +29,6 @@
   font-weight: bold;
 }
 
-.list li:hover {
+.list li a:hover {
   color: green;
 }
