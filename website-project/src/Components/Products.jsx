@@ -14,16 +14,21 @@ class Products extends Component {
       .then((response) => this.setState({ products: response.data }));
   }
   render() {
+    const { products } = this.state;
     return (
       <div className={styles.container}>
-        {this.state.products.map((product) => (
-          <Card
-            key={product.id}
-            image={product.image}
-            name={product.title}
-            click={product.price}
-          />
-        ))}
+        {products.length ? (
+          products.map((product) => (
+            <Card
+              key={product.id}
+              image={product.image}
+              name={product.title}
+              click={product.price}
+            />
+          ))
+        ) : (
+          <h1>Loading...</h1>
+        )}
       </div>
     );
   }
