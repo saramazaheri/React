@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import { Link } from "react-router-dom";
+
 import styles from "./Card.module.css";
 
 import down from "../images/down.svg";
@@ -25,7 +27,7 @@ class Card extends Component {
   };
 
   render() {
-    const { image, name, click } = this.props;
+    const { image, name, click, id } = this.props;
     const { counter } = this.state;
     let text;
     if (counter == 0) {
@@ -36,7 +38,9 @@ class Card extends Component {
     return (
       <div className={styles.container}>
         <img src={image} alt="4cards" />
-        <h3>{name}</h3>
+        <h3>
+          <Link to={`/products/${id}`}>{name}</Link>
+        </h3>
         <p>{text}</p>
         <div className={styles.counter}>
           <img

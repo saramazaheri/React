@@ -34,6 +34,7 @@ class Cards extends Component {
             image={phone.image}
             name={phone.name}
             click={phone.click}
+            id={phone.id}
           />
         ))}
       </div>
