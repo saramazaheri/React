@@ -9,8 +9,12 @@ function AboutUs() {
   };
   return (
     <div>
+      <br />
       <h1>About Us</h1>
+      <br />
       <button onClick={clickHandler}>Go Home</button>
+      <br />
+      <br />
     </div>
   );
 }
