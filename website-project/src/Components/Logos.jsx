@@ -7,7 +7,7 @@ import branch2 from "../images/2b.png";
 const Logos = () => {
   return (
     <div className={styles.container}>
-      <h3>Subsidiary companies of Refah Bank</h3>
+      <h3>Subsidiary companies of Cat Bank</h3>
       <div>
         <img src={branch1} alt="logo" />
         <img src={branch2} alt="logo" />

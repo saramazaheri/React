@@ -9,11 +9,12 @@ const Baner = () => {
     <div className={styles.container}>
       <img src={baner} alt="baner" />
       <div className={styles.textcontainer}>
-        <h1>Refah Bank</h1>
+        <h1>Cat Shop</h1>
         <p>
-          Bank Refah, is one of Iran's major banks. Bank Refah, with its
-          headquarters in Tehran, Iran, is a retail commercial bank owned and
-          controlled by Social Security Organization of Iran.
+          Climb a tree, wait for a fireman jump to fireman then scratch his face
+          use lap as chair. Break lamps and curl up into a ball i could pee on
+          this if i had the energy yet cats making all the muffins for love me!
+          and human give me attention meow.
         </p>
       </div>
     </div>

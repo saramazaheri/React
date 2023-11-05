@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import HomePage from "./Components/HomePage";
 import Blogs from "./Components/Blogs";
 import AboutUs from "./Components/AboutUs";
@@ -18,7 +18,7 @@ class App extends Component {
       <div>
         <div>
           <NavBar />
-          <Switch>
+          <Routes>
             <Route path="/products/:id" component={Product} />
             <Route
               path="/blogs/:author?"
@@ -27,11 +27,11 @@ class App extends Component {
             />
             <Route path="/aboutus" component={AboutUs} />
             <Route path="/products" component={Products} />
-            <Redirect from="/articles" to="/blogs" />
+            {/* <Redirect from="/articles" to="/blogs" /> */}
             <Route exact path="/" component={HomePage} />
             <Route path="/notfound" component={Notfound} />
-            <Redirect to="/notfound" />
-          </Switch>
+            {/* <Redirect to="/notfound" /> */}
+          </Routes>
         </div>
       </div>
     );

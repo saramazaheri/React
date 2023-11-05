@@ -14,10 +14,10 @@ class Cards extends Component {
     super();
     this.state = {
       phoneData: [
-        { id: 1, image: pic1, name: "Refah Bank1", click: "100" },
-        { id: 2, image: pic2, name: "Refah Bank2", click: "200" },
-        { id: 3, image: pic3, name: "Refah Bank3", click: "300" },
-        { id: 4, image: pic4, name: "Refah Bank4", click: "400" },
+        { id: 1, image: pic1, name: "Cat Bank1", click: "100" },
+        { id: 2, image: pic2, name: "Cat Bank2", click: "200" },
+        { id: 3, image: pic3, name: "Cat Bank3", click: "300" },
+        { id: 4, image: pic4, name: "Cat Bank4", click: "400" },
       ],
     };
   }
