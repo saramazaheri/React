@@ -4,6 +4,7 @@ import Test from "./Test";
 import Courses from "./Courses";
 import Banner from "./Banner";
 import Counter from "./Counter";
+import Form from "./Form";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <p>I am from Tehran</p>
       </div>
       <Courses />
+      <Form />
     </React.Fragment>
   );
 }

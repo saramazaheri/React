@@ -1,0 +1,11 @@
+.container {
+  background-color: silver;
+  margin: 20px;
+  padding: 20px;
+}
+
+.selected {
+  background-color: pink;
+  margin: 20px;
+  padding: 20px;
+}
